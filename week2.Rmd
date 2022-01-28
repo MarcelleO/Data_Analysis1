@@ -1,0 +1,42 @@
+---
+title: "week2"
+author: "Marcelle"
+date: "1/27/2022"
+output: html_document
+---
+
+
+#R-markdown differs from script because when it converts text to HTML it is rendered nicely, including the R code such as an embedded plot
+#you can edit HTML page later on as well
+
+#byrow argument: FALSE will fill columns firsy (the default)
+#TRUE will fill rows first
+#Array are n-dimensional data structures
+#attributes include dim(a), class(a), attributes(a), str(a)
+#reminder: str(a) is structure
+
+#subsetting using index positions() and bracket notation([])
+#index positions: extract depending on position 
+#example: m[1,1] will pull from (row, column)
+#list and Data Frames 
+```{r}
+s <- c("this", "is", "a", "vector", "of", "strings")
+```
+#double bracket is a matrix: will extract as an object with attributes of a e.i. matrix
+#single bracket returns a list: used to subset elements out of a list
+
+#data frame df <-data.frame
+#heterogeneous structure that includes the same number of objects
+
+#read in dataframes
+#df <- read.csv(
+#file= path to file name
+#sep=",",  #comma separated file
+#header=TRUE 
+#stringsAsFactors=FALSE)
+```{r}
+library(tidyverse)
+reduced <- read_csv("~/reduced.csv", col_names = TRUE)
+```
+
+
